@@ -4,7 +4,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  entry: "./src/javascripts/main.js",
+  entry: {
+    main: "./src/javascripts/main.js"
+  },
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: "javascripts/main.js"
@@ -20,6 +22,18 @@ module.exports = {
           },
           {
             loader: "css-loader"
+          }
+        ]
+      },
+      {
+        test: /\.png|.jpg/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              esModule: false,
+              name: "images/[name].[ext]"
+            }
           }
         ]
       }
