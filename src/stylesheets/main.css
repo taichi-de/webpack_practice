@@ -1,5 +1,21 @@
-@import "./menu.scss";
-@import "./footer.scss";
+.menu {
+  display: flex;
+  margin-bottom: 4em;
+}
+
+.menu_item {
+  margin-right: 0.5em;
+}
+
+.menu_item a {
+  padding: 0.5em;
+  border-bottom: 4px solid #ddd;
+  text-decoration: none;
+}
+
+.menu_item a:hover {
+  color: green;
+}
 
 html,
 body,
@@ -44,11 +60,10 @@ h1 {
   margin: 1em 0;
 }
 
-$icon-size: 64px;
 .icon {
-  width: $icon-size;
-  height: $icon-size;
-  border-radius: $icon-size/2;
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
   padding: 4px;
   position: absolute;
   top: 1em;

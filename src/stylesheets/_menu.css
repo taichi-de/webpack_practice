@@ -1,0 +1,18 @@
+.menu {
+  display: flex;
+  margin-bottom: 4em;
+}
+
+.menu_item {
+  margin-right: 0.5em;
+}
+
+.menu_item a {
+  padding: 0.5em;
+  border-bottom: 4px solid #ddd;
+  text-decoration: none;
+}
+
+.menu_item a:hover {
+  color: green;
+}
